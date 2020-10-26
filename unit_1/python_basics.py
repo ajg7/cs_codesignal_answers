@@ -25,4 +25,23 @@ def csSquareAllDigits(n):
 print(csSquareAllDigits(8756))
 
 #School Years And Groups
-#def csSchoolYearsAndGroups(years, groups):
+def csSchoolYearsAndGroups(years, groups):
+    result = []
+    for year in range(1, years + 1):
+        for group in range(0, groups):
+            result.append("%d%s" % (year, chr(group + ord("a"))))
+    return ", ".join(result)
+
+print(csSchoolYearsAndGroups(7, 4))
+
+# Make it Jazzy
+def csMakeItJazzy(chords):
+    result = []
+    for chord in chords:
+        if chord.count(str(7)) == 1:
+            result.append(chord)
+        else:
+            result.append(f"{chord}7")
+    return result
+
+print(csMakeItJazzy(["G7", "F", "C"]))
