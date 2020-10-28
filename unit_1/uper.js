@@ -30,13 +30,7 @@ const csShortestWord = inputStr => {
 // Sum of Positive
 
 const csSumOfPositive = inputArr => {
-    const result = inputArr.filter(number => {
-        if(number > 0) {
-            return true;
-        } else {
-            return false
-        }
-    })
+    const result = inputArr.filter(number => number > 0)
     const sum = result.reduce((accumulator, currentValue) => {
         return accumulator += currentValue
     }, 0)
