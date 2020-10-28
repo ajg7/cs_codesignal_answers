@@ -14,19 +14,18 @@ const csRemoveTheVowels = inputStr => {
 
 const csShortestWord = inputStr => {
     let minLength = Infinity
-  
     let currWordLength = 0
     for (let char of inputStr) {
-      if (char !== ' ' && char !== '\t' && char !== '\n') {
-        currWordLength++
-      } else {
-        minLength = Math.min(minLength, currWordLength)
-        currWordLength = 0
-      }
+        if (char !== ' ' && char !== '\t' && char !== '\n') {
+            currWordLength++
+        } else {
+            minLength = Math.min(minLength, currWordLength)
+            currWordLength = 0
+        }
     }
     minLength = Math.min(minLength, currWordLength)
     return minLength
-  }
+}
 
 // Sum of Positive
 
