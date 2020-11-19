@@ -1,3 +1,34 @@
+// Isomorphic String 
+function csIsomorphicStrings(a, b) {
+    if (a.length !== b.length) return false
+    
+    const mapA = {}
+    const mapB = {}
+    
+    for (let i = 0; i < a.length; i++) {
+        const charA = a[i]
+        const charB = b[i]
+        
+        if (mapA[charA] && mapA[charA] !== charB) {
+            return false
+        }
+        
+        if (mapB[charB] && mapB[charB] !== charA) {
+            return false
+        }
+                
+        if (!mapA[charA]) {
+            mapA[charA] = charB
+        }
+        
+        if (!mapB[charB]) {
+            mapB[charB] = charA
+        }
+    }
+    
+    return true
+}
+
 // Find a Single Number
 const csFindTheSingleNumber = nums => {
     const map = new Map()
@@ -65,7 +96,6 @@ const csMaxNumberOfLambdas = text => {
                 map.set(char, map.get(char) - 1)
                 continue
             }
-            
             return count
         }
         count++
@@ -74,8 +104,11 @@ const csMaxNumberOfLambdas = text => {
     return count
 }
 
-// Isomorphic String 
-function csIsomorphicStrings(a, b) {
+// Word Patterns
+
+function csWordPattern(a, b) {
+    b = b.split(' ')
+    
     if (a.length !== b.length) return false
     
     const mapA = {}
