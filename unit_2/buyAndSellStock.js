@@ -15,9 +15,8 @@ const buyAndSellStock = prices => {
     })
     return maxProfit;
 }
-
-
 console.log(buyAndSellStock([6, 3, 1, 2, 5, 4]))
+
 
 const alphabeticShift = inputStr => {
     const result = [];
@@ -42,3 +41,8 @@ const alphabeticShift = inputStr => {
 
 console.log(alphabeticShift("crazy"))
 
+/*
+Time Complexity-
+Space Complexity-
+
+*/

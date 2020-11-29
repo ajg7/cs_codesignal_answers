@@ -20,6 +20,11 @@ const csReverseIntegerBits = n => {
 }
 
 console.log(csReverseIntegerBits(417))
+/*
+Time Complexity- O(n), because the array at the end is joined
+Space Complexity- O(n), because the array takes up space in memory, and depends upon the size of n (i.e. how many times it needs to divide until it is 0)
+
+*/
 
 // Convert Binary to ASCii
 const csBinaryToASCII = binary => {
@@ -34,6 +39,11 @@ const csBinaryToASCII = binary => {
 
 console.log(csBinaryToASCII("011011000110000101101101011000100110010001100001"))
 
+/*
+Time Complexity- The input is sliced, so it is O(n)
+Space Complexity- An array is stored in memory, so it is O(n)
+
+*/
 
 // Raindrops
 const csRaindrops = number => {
@@ -54,3 +64,9 @@ const csRaindrops = number => {
 }
 
 console.log(csRaindrops(30))
+
+/*
+Time Complexity- Due to the result array, being joined it is O(n)
+Space Complexity- An array is being stored in memory, and its size depends upon the size of the input O(n)
+
+*/
