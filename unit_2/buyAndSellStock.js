@@ -17,6 +17,10 @@ const buyAndSellStock = prices => {
 }
 console.log(buyAndSellStock([6, 3, 1, 2, 5, 4]))
 
+/*
+Time Complexity- Quadratic, because for every iteration of the forEach, you are doing another operation (slice) at O(n)
+
+*/
 
 const alphabeticShift = inputStr => {
     const result = [];
@@ -40,9 +44,3 @@ const alphabeticShift = inputStr => {
 }
 
 console.log(alphabeticShift("crazy"))
-
-/*
-Time Complexity-
-Space Complexity-
-
-*/
